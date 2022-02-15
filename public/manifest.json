@@ -1,0 +1,19 @@
+{
+  "short_name": "thiagofeijor",
+  "name": "thiagofeijor",
+  "description": "My website =]",
+  "start_url": "/",
+  "scope": ".",
+  "dir": "ltr",
+  "display_override": ["window-control-overlay", "minimal-ui"],
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "categories": ["business", "government", "productivity", "utilities"],
+  "shortcuts" : [
+    {
+      "name": "Home",
+      "url": "/"
+    }
+  ]
+}
