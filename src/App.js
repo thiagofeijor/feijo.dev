@@ -1,7 +1,9 @@
 import React from 'react'
+import { Profile } from 'components'
+import './styles.css'
 
 const App = () => (
-  <p>hi</p>
+  <Profile/>
 )
 
 export default App
