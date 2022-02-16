@@ -5,7 +5,7 @@ const path = require('path')
 const WebpackAssetsManifest = require('webpack-assets-manifest')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
-const CompressionPlugin = require("compression-webpack-plugin")
+const CompressionPlugin = require('compression-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const common = require('./webpack.common')
 

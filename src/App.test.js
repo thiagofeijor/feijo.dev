@@ -6,5 +6,5 @@ import App from './App'
 test('should render', async () => {
   render(<App />)
 
-  expect(screen.getByText('hi')).toBeInTheDocument()
+  expect(screen.getByText('Thiago Feijó')).toBeInTheDocument()
 })
