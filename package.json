@@ -8,6 +8,7 @@
     "postinstall": "cd node_modules/favicons/dist/config/ && sed '360,367d' icons.json > temp && mv temp icons.json",
     "start": "webpack serve --mode development --config tools/webpack.dev.js",
     "build": "webpack --mode production --config tools/webpack.prod.js",
+    "deploy": "gh-pages -d docs",
     "analyzer": "webpack --config tools/webpack.analyzer.js",
     "test": "jest --maxConcurrency=2 --maxWorkers=2",
     "lint": "eslint --ext js,jsx 'src/**/**.js' --max-warnings 0"
@@ -46,6 +47,7 @@
     "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.4.0",
     "husky": "^5.2.0",
     "jest": "^27.3.1",
