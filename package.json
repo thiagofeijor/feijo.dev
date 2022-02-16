@@ -67,12 +67,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "npx --no-install commitlint --edit $1",
-      "pre-push": "npm test && npm run lint"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
