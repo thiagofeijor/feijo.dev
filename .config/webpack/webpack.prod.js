@@ -1,19 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
-require('dotenv').config()
-const { merge } = require('webpack-merge')
-const path = require('path')
-const WebpackAssetsManifest = require('webpack-assets-manifest')
+const { merge } = require('webpack-merge');
+const path = require('path');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const common = require('./webpack.common')
+const WorkboxPlugin = require('workbox-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: 'static/[name].[contenthash].js',
-    path: path.resolve(__dirname, '..', 'docs'),
+    path: path.resolve(process.cwd(), 'build'),
   },
   optimization: {
     splitChunks: {
@@ -22,8 +21,8 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'public/index.html'),
-      filename: path.join(__dirname, '..', 'docs/index.html'),
+      template: path.join(process.cwd(), 'public/index.html'),
+      filename: path.join(process.cwd(), 'build/index.html'),
     }),
     new FaviconsWebpackPlugin({
       logo: './public/logo.png',
