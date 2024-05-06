@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-require('dotenv').config()
 const { merge } = require('webpack-merge')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -14,7 +13,7 @@ module.exports = merge({
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '..', 'public/index.html'),
-      filename: path.join(__dirname, '..', 'build/index.html'),
+      filename: path.join(__dirname, '..', 'dist/index.html'),
     }),
   ],
   devServer: {

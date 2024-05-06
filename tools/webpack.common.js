@@ -1,15 +1,24 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, '..', 'src/index.js'),
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false
+        },
+      },
+      {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/,
+        resolve: {
+          fullySpecified: false
+        },
       },
       {
         test: /\.css$/,
@@ -49,13 +58,6 @@ module.exports = {
       dependencies: true,
       dependenciesCount: 10000,
       percentBy: null,
-    }),
-    new webpack.EnvironmentPlugin([]),
-    new webpack.DefinePlugin({
-      MODE: `'${process.env.MODE}'`,
-    }),
-    new webpack.ProvidePlugin({
-      process: 'process/browser',
     }),
   ],
   resolve: {
