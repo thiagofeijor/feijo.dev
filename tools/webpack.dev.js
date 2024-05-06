@@ -14,7 +14,7 @@ module.exports = merge({
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '..', 'public/index.html'),
-      filename: path.join(__dirname, '..', 'dist/index.html'),
+      filename: path.join(__dirname, '..', 'build/index.html'),
     }),
   ],
   devServer: {
