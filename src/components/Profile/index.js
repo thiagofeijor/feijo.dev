@@ -1,8 +1,8 @@
 import React from 'react'
 
 import avatar from '../../assets/img/avatar.jpeg'
-import github from '../../assets/icon/github.svg'
-import linkedin from '../../assets/icon/linkedin.svg'
+import GithubIcon from '../../assets/icon/github.svg'
+import LinkedinIcon from '../../assets/icon/linkedin.svg'
 
 import styles from './styles.css'
 
@@ -14,12 +14,12 @@ const Profile = () => (
     <ul className={styles.ul}>
       <li className={styles.li}>
         <a href="https://github.com/thiagofeijor/" target="_black" aria-label="Github">
-          <img className={styles.aIconLink} src={github} alt="Github link" />
+          <GithubIcon className={styles.aIconLink} alt="Github link" />
         </a>
       </li>
       <li className={styles.li}>
         <a href="https://www.linkedin.com/in/thiagofeijor/" target="_black" aria-label="LinkedIn">
-          <img className={styles.aIconLink} src={linkedin} alt="Linkedin link" />
+          <LinkedinIcon className={styles.aIconLink} alt="Linkedin link" />
         </a>
       </li>
     </ul>
