@@ -1,5 +1,8 @@
-module.exports = {
+/** @type {import('jest').Config} */
+const config = {
+  verbose: true,
   clearMocks: true,
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
     '\\.s?css$': '<rootDir>/tests/fileMock.js',
     '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -9,5 +12,6 @@ module.exports = {
   },
   setupFilesAfterEnv: ['<rootDir>/tests/setupTests.js'],
   testMatch: ['**/?(*.)*(spec|test).[tj]s?(x)'],
-  testEnvironment: 'jsdom',
-}
+};
+
+module.exports = config;

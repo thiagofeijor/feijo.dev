@@ -6,8 +6,6 @@
     "node": true
   },
   "extends": [
-    "airbnb",
-    "airbnb/hooks",
     "eslint:recommended",
     "plugin:react/recommended",
     "prettier"
@@ -32,6 +30,9 @@
         ]
       },
       "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "rules": {
@@ -65,7 +66,7 @@
           "**/*test.js",
           "tests/setupTests.js"
         ],
-        "optionalDependencies": false,
+        "optionalDependencies": true,
         "peerDependencies": false,
         "packageDir": "./"
       }
