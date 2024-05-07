@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -35,10 +35,9 @@ jobs:
         run: |
           npm ci
           npm run build
-          ls
 
-      - name: Deploy to GitHub Pages 🚀
+      - id: deployment
+        name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
-        id: deployment
         with:
-          folder: _site
+          folder: docs
