@@ -5,6 +5,7 @@
 /docs
 /dist
 /build
+/_site
 
 # testing
 /coverage
