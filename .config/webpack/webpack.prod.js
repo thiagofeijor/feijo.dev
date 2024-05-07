@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: 'static/[name].[contenthash].js',
-    path: path.resolve(process.cwd(), '_site'),
+    path: path.resolve(process.cwd(), 'docs'),
   },
   optimization: {
     splitChunks: {
@@ -22,7 +22,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(process.cwd(), 'public/index.html'),
-      filename: path.join(process.cwd(), '_site/index.html'),
+      filename: path.join(process.cwd(), 'docs/index.html'),
     }),
     new FaviconsWebpackPlugin({
       logo: './public/logo.png',
