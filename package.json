@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack serve --mode development --config .config/webpack/webpack.dev.js",
     "build": "webpack --mode production --config .config/webpack/webpack.prod.js",
-    "deploy": "gh-pages -d build",
     "analyzer": "webpack --config .config/webpack/webpack.analyzer.js",
     "lint": "eslint --ext js,jsx 'src/**/**.js' --max-warnings 0",
     "test": "jest --maxConcurrency=2 --maxWorkers=2",
