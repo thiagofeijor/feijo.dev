@@ -4,24 +4,26 @@ import avatar from '../../assets/img/avatar.jpeg'
 import GithubIcon from '../../assets/icon/github.svg'
 import LinkedinIcon from '../../assets/icon/linkedin.svg'
 
-const Profile = () => (
-  <div>
-    <img src={avatar} alt="avatar" />
-    <h1>Thiago Feijó</h1>
-    <h2>Senior React Developer</h2>
-    <ul>
-      <li>
+import * as styles from './styles.css'
+
+export const Profile = () => (
+  <div className={styles?.body}>
+    <img className={styles?.avatar} src={avatar} alt="avatar" />
+    <h1 className={styles?.name}>Thiago Feijó</h1>
+    <h2 className={styles?.role}>Senior React Developer</h2>
+    <ul className={styles?.ul}>
+      <li className={styles?.li}>
         <a href="https://github.com/thiagofeijor/" target="_black" aria-label="Github">
           <GithubIcon alt="Github link" />
         </a>
       </li>
-      <li>
+      <li className={styles?.li}>
         <a href="https://www.linkedin.com/in/thiagofeijor/" target="_black" aria-label="LinkedIn">
           <LinkedinIcon alt="Linkedin link" />
         </a>
       </li>
     </ul>
   </div>
-)
+);
 
-export default Profile
+export default Profile;
